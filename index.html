@@ -1,0 +1,230 @@
+<!DOCTYPE html><html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FF KIPAS BY DEKU 2026</title><link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet"><style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif}
+
+/* BACKGROUND */
+body{
+min-height:100vh;
+background-image:url('https://i.postimg.cc/zXm4hMvL/2f55c1615eea83ffebb702370749be3f.jpg');
+background-size:cover;
+background-position:center;
+background-attachment:fixed;
+}
+
+/* overlay supaya background tetap kelihatan */
+.bg-overlay{
+position:fixed;
+left:0;
+top:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.45);
+backdrop-filter:blur(4px);
+z-index:0;
+}
+
+/* tombol atas */
+.top-btn{
+position:fixed;
+top:20px;
+right:20px;
+z-index:10;
+}
+
+.top-btn button{
+padding:12px 22px;
+border:none;
+border-radius:25px;
+background:linear-gradient(135deg,#FFD700,#FF8C00);
+color:white;
+font-weight:600;
+font-size:14px;
+cursor:pointer;
+box-shadow:0 0 20px rgba(255,170,0,0.6);
+}
+
+/* wrapper supaya container tidak menabrak header */
+.wrapper{
+width:100%;
+display:flex;
+justify-content:center;
+padding-top:150px;
+position:relative;
+z-index:2;
+}
+
+/* card utama */
+.container{
+width:88%;
+max-width:360px;
+padding:30px 22px;
+
+background:rgba(255,255,255,0.08);
+backdrop-filter:blur(18px);
+
+border-radius:26px;
+border:1px solid rgba(255,255,255,0.2);
+
+box-shadow:0 20px 60px rgba(0,0,0,0.6);
+
+text-align:center;
+}
+
+h1{
+color:white;
+font-size:20px;
+margin-bottom:24px;
+line-height:1.5;
+}
+
+button{
+width:100%;
+padding:14px;
+margin:9px 0;
+border:none;
+border-radius:25px;
+font-size:14px;
+font-weight:600;
+cursor:pointer;
+color:white;
+transition:0.25s;
+}
+
+button:hover{transform:scale(1.05)}
+
+.gold{background:linear-gradient(135deg,#FFD700,#FF8C00)}
+.blue{background:linear-gradient(135deg,#00C6FF,#0047FF)}
+
+.info-box{
+margin-top:14px;
+padding:12px;
+border-radius:16px;
+background:rgba(255,255,255,0.08);
+border:1px solid rgba(255,255,255,0.18);
+color:white;
+font-size:13px;
+line-height:1.6;
+}
+
+.online{color:#00ff88;font-weight:600}
+
+.footer-text{
+margin-top:18px;
+font-size:12px;
+color:#ddd
+}
+
+/* IKLAN KECIL */
+.ads{
+position:fixed;
+bottom:20px;
+left:50%;
+transform:translateX(-50%);
+background:white;
+padding:14px 18px;
+border-radius:12px;
+font-size:14px;
+box-shadow:0 10px 30px rgba(0,0,0,0.35);
+display:none;
+cursor:pointer;
+z-index:999;
+}
+
+/* IKLAN TENGAH */
+.big-ad{
+position:fixed;
+left:50%;
+top:50%;
+transform:translate(-50%,-50%);
+width:260px;
+background:white;
+padding:20px;
+border-radius:14px;
+box-shadow:0 15px 50px rgba(0,0,0,0.5);
+display:none;
+text-align:center;
+z-index:1000;
+}
+
+.big-ad h3{font-size:16px;margin-bottom:6px}
+.big-ad p{font-size:13px;margin-bottom:10px;color:#444}
+
+.big-ad button{
+background:#ff7a00;
+color:white;
+border:none;
+padding:10px 14px;
+border-radius:10px;
+font-size:13px;
+cursor:pointer;
+}
+
+.close-ad{
+position:absolute;
+right:10px;
+top:6px;
+cursor:pointer;
+font-size:18px;
+}
+</style></head><body><div class="bg-overlay"></div><div class="top-btn">
+<button onclick="goDownload()">Unduh Sekarang</button>
+</div><div class="wrapper">
+<div class="container"><h1>
+DOWNLOAD FF KIPAS<br>
+NEW UPDATE 2026 BY DEKU
+</h1><button class="gold" onclick="goDownload()">Download(TANPA OBB)</button> <button class="blue" onclick="goTutorial()">Config Json V1</button> <button class="blue" onclick="goVerify()">Verifikasi id</button> <button class="blue" onclick="goPanel()">Acces Panel</button>
+
+<div class="info-box">
+⚡ Status Server : <span class="online">Online</span><br>
+👥 Support : Channel WhatsApp
+</div><button class="gold" onclick="goDiscord()">Join Channel</button>
+
+<div class="footer-text">
+Download FFKIPAS dan rasakan serunya memakai set idaman
+</div></div>
+</div><script>
+
+function goDownload(){window.open("https://sfl.gl/QmNM","_blank")}
+function goTutorial(){window.open("https://ffkipas.my.id/tutorial","_blank")}
+function goVerify(){window.open("https://ffkipas.my.id/verifyuid","_blank")}
+function goPanel(){window.open("https://ffkipas.my.id/panel/","_blank")}
+function goDiscord(){window.open("https://discord.gg/yourserver","_blank")}
+
+/* LINK IKLAN (GANTI DI SINI) */
+function openAd(){window.open("https://whatsapp.com/channel/0029Vb7c8cSKWEKpTJDmr419","_blank")}
+
+/* IKLAN KECIL */
+const ads=["ad1","ad2","ad3"]
+
+function showRandomAd(){
+let id=ads[Math.floor(Math.random()*ads.length)]
+let ad=document.getElementById(id)
+
+ad.style.display="block"
+
+setTimeout(()=>{ad.style.display="none"},1800)
+}
+
+setInterval(showRandomAd,3200)
+
+/* klik iklan */
+document.querySelectorAll('.ads').forEach(ad=>{
+ad.onclick=function(){openAd()}
+})
+
+/* IKLAN BESAR */
+function showBigAd(){
+let ad=document.getElementById("bigAd")
+ad.style.display="block"
+setTimeout(()=>{ad.style.display="none"},3500)
+}
+
+function closeBigAd(){document.getElementById("bigAd").style.display="none"}
+
+setInterval(showBigAd,10000)
+
+</script></body>
+</html>
