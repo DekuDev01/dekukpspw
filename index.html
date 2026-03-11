@@ -16,16 +16,26 @@ box-sizing:border-box;
 font-family:'Poppins',sans-serif
 }
 
+/* BACKGROUND FIX */
+
 body{
 min-height:100vh;
-background:url('https://i.postimg.cc/zXm4hMvL/2f55c1615eea83ffebb702370749be3f.jpg') center/cover no-repeat fixed;
+background-image:url('https://i.postimg.cc/zXm4hMvL/2f55c1615eea83ffebb702370749be3f.jpg');
+background-size:cover;
+background-position:center;
+background-repeat:no-repeat;
+background-attachment:scroll;
 }
+
+/* OVERLAY */
 
 .bg-overlay{
 position:fixed;
-inset:0;
-background:rgba(0,0,0,0.45);
-backdrop-filter:blur(4px);
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.35);
 z-index:0;
 }
 
@@ -65,7 +75,6 @@ width:90%;
 max-width:360px;
 padding:30px 22px;
 background:rgba(255,255,255,0.08);
-backdrop-filter:blur(18px);
 border-radius:26px;
 border:1px solid rgba(255,255,255,0.2);
 box-shadow:0 20px 60px rgba(0,0,0,0.6);
@@ -236,13 +245,9 @@ Download FFKIPAS dan rasakan serunya memakai set idaman
 </div>
 </div>
 
-<!-- IKLAN KECIL -->
-<script src="https://pl28889783.effectivegatecpm.com/06/b2/26/06b226fdbfad87a7dddd1d8839016773.js"></script>
 <div class="ads" id="ad1">🔥 TUTORIAL ADA DI SALURAN</div>
 <div class="ads" id="ad2">⚡ FOLLOW MY TIKTOK @itsadekuu</div>
 <div class="ads" id="ad3">🎁 JOIN SALURAN DISINI CUY</div>
-
-<!-- IKLAN BESAR -->
 
 <div class="big-ad" id="bigAd">
 <span class="close-ad" onclick="closeBigAd()">×</span>
@@ -268,8 +273,6 @@ Download FFKIPAS dan rasakan serunya memakai set idaman
 <div id="container-95ba0c68eafddae2b92c3f737f5bfb9c"></div>
 <script>
 
-/* LINK */
-
 function goDownload(){window.open("https://sfl.gl/oCNNbsm","_blank")}
 function goTutorial(){window.open("https://sfl.gl/CZuEeZt","_blank")}
 function goVerify(){window.open("https://ffkipas.my.id/verifyuid","_blank")}
@@ -279,8 +282,6 @@ function goDiscord(){window.open("https://whatsapp.com/channel/0029Vb7c8cSKWEKpT
 function openAd(){
 window.open("https://whatsapp.com/channel/0029Vb7c8cSKWEKpTJDmr419","_blank")
 }
-
-/* IKLAN RANDOM */
 
 const ads=["ad1","ad2","ad3"]
 
@@ -301,13 +302,9 @@ ad.style.display="none"
 
 setInterval(showRandomAd,3200)
 
-/* CLICK IKLAN */
-
 document.querySelectorAll('.ads').forEach(ad=>{
 ad.addEventListener("click",openAd)
 })
-
-/* IKLAN BESAR */
 
 function showBigAd(){
 let ad=document.getElementById("bigAd")
@@ -327,4 +324,4 @@ setInterval(showBigAd,10000)
 </script>
 
 </body>
-</html>
+                                                     </html>
