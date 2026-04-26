@@ -1,310 +1,753 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>FF KIPAS BY DEKU 2026</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+  <title>FFKIPAS | Private Server Download</title>
+  <!-- Google Fonts: Poppins & Inter -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <!-- Font Awesome 6 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <!-- Adsterra Ad Scripts (Tanpa Banner) -->
+  <script src="https://molecularshindy.com/64/d3/e8/64d3e81671a86f23db58f591bc370f3d.js"></script>
+  <script src="https://molecularshindy.com/58/02/36/5802360e42a1aef310a8db6a44d5462a.js"></script>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    body {
+      background: #0a0a0f;
+      font-family: 'Poppins', 'Inter', sans-serif;
+      color: #eef2ff;
+      line-height: 1.5;
+      scroll-behavior: smooth;
+    }
 
-<style>
+    ::-webkit-scrollbar {
+      width: 6px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #111;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #00ff88;
+      border-radius: 10px;
+    }
 
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:'Poppins',sans-serif
-}
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem 4rem;
+    }
 
-/* BACKGROUND */
+    .logo-center {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+    .logo-glow {
+      font-size: 2.5rem;
+      font-weight: 800;
+      background: linear-gradient(135deg, #00ff88, #00e676);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      text-shadow: 0 0 12px rgba(0, 255, 136, 0.4);
+      letter-spacing: -0.5px;
+    }
 
-body{
-min-height:100vh;
-background-color:#000;
-background-image:url('https://i.postimg.cc/zXm4hMvL/2f55c1615eea83ffebb702370749be3f.jpg');
-background-size:cover;
-background-position:center;
-background-repeat:no-repeat;
-background-attachment:fixed;
-}
+    .thumbnail {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 2rem;
+    }
+    .thumb-img {
+      width: 100%;
+      max-width: 230px;
+      border-radius: 28px;
+      box-shadow: 0 20px 35px -12px rgba(0,0,0,0.7), 0 0 0 1px rgba(0,255,136,0.2);
+      transition: transform 0.2s ease;
+    }
+    .thumb-img:hover {
+      transform: scale(1.02);
+    }
 
-/* OVERLAY */
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(0, 255, 136, 0.12);
+      backdrop-filter: blur(2px);
+      padding: 6px 14px;
+      border-radius: 60px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      color: #b0ffd4;
+      border: 1px solid rgba(0, 255, 136, 0.3);
+      margin-bottom: 1rem;
+    }
+    .badge i {
+      font-size: 0.85rem;
+      color: #00ff88;
+    }
 
-.bg-overlay{
-position:fixed;
-top:0;
-left:0;
-width:100%;
-height:100%;
-background:rgba(0,0,0,0.15);
-z-index:1;
-pointer-events:none;
-}
+    .main-card {
+      background: rgba(18, 18, 24, 0.75);
+      backdrop-filter: blur(2px);
+      border-radius: 2rem;
+      padding: 2rem;
+      margin: 1.5rem 0 2rem;
+      box-shadow: 0 20px 35px -12px rgba(0,0,0,0.5);
+      border: 1px solid rgba(0, 255, 136, 0.2);
+    }
+    h1 {
+      font-size: 2.4rem;
+      font-weight: 800;
+      background: linear-gradient(135deg, #ffffff, #ccf7e3);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      margin-bottom: 1rem;
+      line-height: 1.2;
+    }
+    .desc {
+      color: #b9c3cf;
+      margin: 1rem 0 1.5rem;
+      font-size: 1rem;
+      font-weight: 400;
+    }
+    .info-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.8rem;
+      background: #0f0f14;
+      padding: 1rem 1.5rem;
+      border-radius: 1.5rem;
+      margin-top: 1.2rem;
+      margin-bottom: 1rem;
+    }
+    .info-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .info-item i {
+      font-size: 1.3rem;
+      color: #00ff88;
+    }
+    .info-label {
+      font-weight: 500;
+      font-size: 0.85rem;
+      color: #9aa8b9;
+    }
+    .info-value {
+      font-weight: 700;
+      font-size: 1.2rem;
+    }
 
-/* BUTTON ATAS */
+    .btn-group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin-top: 1.5rem;
+    }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      background: linear-gradient(105deg, #00e676, #00ff88);
+      border: none;
+      padding: 0.9rem 1.6rem;
+      border-radius: 60px;
+      font-weight: 700;
+      font-family: inherit;
+      font-size: 1rem;
+      color: #091f12;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      box-shadow: 0 6px 14px rgba(0, 255, 136, 0.2);
+      flex: 1 0 auto;
+    }
+    .btn i {
+      font-size: 1.15rem;
+    }
+    .btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 12px 24px rgba(0, 255, 136, 0.45);
+      filter: brightness(1.02);
+    }
+    .btn-outline {
+      background: transparent;
+      border: 1.5px solid #00ff88;
+      color: #00ff88;
+      box-shadow: none;
+      background: rgba(0, 255, 136, 0.05);
+    }
+    .btn-outline i {
+      color: #00ff88;
+    }
+    .btn-outline:hover {
+      background: rgba(0, 255, 136, 0.15);
+      transform: translateY(-2px);
+    }
 
-.top-btn{
-position:fixed;
-top:20px;
-right:20px;
-z-index:10;
-}
-
-.top-btn button{
-padding:12px 22px;
-border:none;
-border-radius:25px;
-background:linear-gradient(135deg,#FFD700,#FF8C00);
-color:white;
-font-weight:600;
-cursor:pointer;
-box-shadow:0 0 20px rgba(255,170,0,0.6);
-}
-
-/* WRAPPER */
-
-.wrapper{
-width:100%;
-display:flex;
-justify-content:center;
-padding-top:140px;
-position:relative;
-z-index:2;
-}
-
-/* CONTAINER */
-
-.container{
-width:90%;
-max-width:360px;
-padding:30px 22px;
-background:rgba(0,0,0,0.35);
-border-radius:26px;
-border:1px solid rgba(255,255,255,0.2);
-box-shadow:0 20px 60px rgba(0,0,0,0.6);
-text-align:center;
-backdrop-filter:blur(6px);
-}
-
-/* TITLE */
-
-h1{
-color:white;
-font-size:20px;
-margin-bottom:22px;
-line-height:1.4;
-}
-
-/* BUTTON */
-
-button{
-width:100%;
-padding:14px;
-margin:9px 0;
-border:none;
-border-radius:25px;
-font-size:14px;
-font-weight:600;
-cursor:pointer;
-color:white;
-transition:0.25s;
-}
-
-button:hover{
-transform:scale(1.05);
-}
-
-.gold{
-background:linear-gradient(135deg,#FFD700,#FF8C00)
-}
-
-.blue{
-background:linear-gradient(135deg,#00C6FF,#0047FF)
-}
-
-/* INFO BOX */
-
-.info-box{
-margin-top:14px;
-padding:12px;
-border-radius:16px;
-background:rgba(255,255,255,0.08);
-border:1px solid rgba(255,255,255,0.18);
-color:white;
-font-size:13px;
-line-height:1.6;
-}
-
-.online{
-color:#00ff88;
-font-weight:600;
-}
-
-.footer-text{
-margin-top:18px;
-font-size:12px;
-color:#ddd;
-}
-
-/* SLOT IKLAN */
-
-.ad-top{
-position:fixed;
-top:80px;
-left:50%;
-transform:translateX(-50%);
-z-index:5;
-}
-
-.ad-left{
-position:fixed;
-left:10px;
-top:40%;
-z-index:5;
-}
-
-.ad-right{
-position:fixed;
-right:10px;
-top:40%;
-z-index:5;
-}
-
-.ad-bottom{
-position:fixed;
-bottom:10px;
-left:50%;
-transform:translateX(-50%);
-z-index:5;
-}
-
-.ad-middle{
-margin-top:20px;
-display:flex;
-justify-content:center;
-}
-
-</style>
+    .modal-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.85);
+      backdrop-filter: blur(8px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 1000;
+      visibility: hidden;
+      opacity: 0;
+      transition: all 0.2s ease;
+    }
+    .modal-overlay.active {
+      visibility: visible;
+      opacity: 1;
+    }
+    .modal-container {
+      background: #12121a;
+      max-width: 480px;
+      width: 90%;
+      border-radius: 32px;
+      padding: 1.8rem;
+      border: 1px solid rgba(0, 255, 136, 0.3);
+      box-shadow: 0 30px 40px rgba(0,0,0,0.6), 0 0 0 1px #00ff8822;
+      transform: scale(0.95);
+      transition: transform 0.2s ease;
+    }
+    .active .modal-container {
+      transform: scale(1);
+    }
+    .modal-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 1.5rem;
+    }
+    .modal-header h3 {
+      font-size: 1.5rem;
+      font-weight: 700;
+      background: linear-gradient(135deg, #00ff88, #a0ffc0);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+    .close-modal {
+      background: none;
+      border: none;
+      color: #ccc;
+      font-size: 1.6rem;
+      cursor: pointer;
+      transition: 0.2s;
+    }
+    .close-modal:hover {
+      color: #00ff88;
+    }
+    .download-options {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .opt-item {
+      background: #1e1e2a;
+      padding: 12px 18px;
+      border-radius: 18px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      cursor: pointer;
+      transition: all 0.15s;
+      border: 1px solid transparent;
+    }
+    .opt-item:not(.disabled):hover {
+      border-color: #00ff88;
+      background: #252535;
+      transform: translateX(4px);
+    }
+    .opt-item.disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+      filter: grayscale(0.1);
+    }
+    .opt-text {
+      font-weight: 600;
+    }
+    .opt-badge {
+      font-size: 0.7rem;
+      background: #2a2a36;
+      padding: 4px 8px;
+      border-radius: 30px;
+    }
+    .countdown-btn {
+      background: #1e2a24;
+      color: #bbffdd;
+      text-align: center;
+      width: 100%;
+      padding: 1rem;
+      border-radius: 2rem;
+    }
+    .spinner {
+      display: inline-block;
+      width: 20px;
+      height: 20px;
+      border: 2px solid rgba(0,255,136,0.3);
+      border-top: 2px solid #00ff88;
+      border-radius: 50%;
+      animation: spin 0.6s linear infinite;
+      margin-right: 8px;
+    }
+    @keyframes spin { to { transform: rotate(360deg); } }
+    .reseller-card-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      max-height: 380px;
+      overflow-y: auto;
+      padding-right: 6px;
+    }
+    .res-card {
+      background: #17171f;
+      border-radius: 1.2rem;
+      padding: 1rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      transition: 0.1s;
+      border-left: 4px solid #00ff88;
+    }
+    .res-card.closed-card {
+      opacity: 0.65;
+      border-left-color: #ef4444;
+    }
+    .res-info h4 {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-weight: 700;
+    }
+    .verified-icon {
+      color: #00ff88;
+    }
+    .status-badge {
+      font-size: 0.7rem;
+      font-weight: 600;
+      padding: 2px 8px;
+      border-radius: 40px;
+      display: inline-block;
+    }
+    .status-open {
+      background: #00ff8822;
+      color: #00ff88;
+    }
+    .status-close {
+      background: #ef444422;
+      color: #ff8a8a;
+    }
+    .buy-btn {
+      background: #00ff8822;
+      border: 1px solid #00ff88;
+      padding: 6px 16px;
+      border-radius: 40px;
+      font-weight: bold;
+      transition: 0.2s;
+      cursor: pointer;
+    }
+    .buy-btn.disabled-btn {
+      opacity: 0.5;
+      cursor: not-allowed;
+      background: #444;
+      border-color: #777;
+      color: #ccc;
+    }
+    .contact-popup-icons {
+      display: flex;
+      gap: 24px;
+      justify-content: center;
+      margin: 1rem 0;
+    }
+    .contact-icon {
+      background: #1f1f2e;
+      padding: 12px;
+      border-radius: 15px;
+      width: 80px;
+      text-align: center;
+      transition: 0.2s;
+      color: #ddd;
+      text-decoration: none;
+    }
+    .contact-icon i {
+      font-size: 2rem;
+      display: block;
+      margin-bottom: 5px;
+    }
+    .contact-icon span {
+      font-size: 0.7rem;
+    }
+    .contact-icon:hover {
+      background: #00ff88;
+      color: #000;
+      transform: translateY(-4px);
+    }
+    hr {
+      border-color: #2c2c38;
+      margin: 12px 0;
+    }
+    @media (max-width: 620px) {
+      .container { padding: 1rem; }
+      h1 { font-size: 1.8rem; }
+      .btn-group { flex-direction: column; }
+      .logo-glow { font-size: 2rem; }
+    }
+  </style>
 </head>
-
 <body>
-
-<div class="bg-overlay"></div>
-
-<div class="top-btn">
-<button onclick="goDownload()">Unduh Sekarang</button>
-</div>
-
-<!-- IKLAN ATAS -->
-<div class="ad-top">
-<script>
-atOptions = {
-'key' : '131672406b091432b0184decb27c232c',
-'format' : 'iframe',
-'height' : 60,
-'width' : 468,
-'params' : {}
-};
-</script>
-<script src="https://authoritieswoundjoint.com/131672406b091432b0184decb27c232c/invoke.js"></script>
-</div>
-
-<!-- IKLAN KIRI -->
-<div class="ad-left">
-<script>
-atOptions = {
-'key' : 'ff0ea1a2488f88c6fa5c7a3d63d346fb',
-'format' : 'iframe',
-'height' : 300,
-'width' : 160,
-'params' : {}
-};
-</script>
-<script src="https://authoritieswoundjoint.com/ff0ea1a2488f88c6fa5c7a3d63d346fb/invoke.js"></script>
-</div>
-
-<!-- IKLAN KANAN -->
-<div class="ad-right">
-<script>
-atOptions = {
-'key' : '62ea6b1bf8b9adf1e1281283b856d1c8',
-'format' : 'iframe',
-'height' : 600,
-'width' : 160,
-'params' : {}
-};
-</script>
-<script src="https://authoritieswoundjoint.com/62ea6b1bf8b9adf1e1281283b856d1c8/invoke.js"></script>
-</div>
-
-<div class="wrapper">
 <div class="container">
+  <div class="logo-center">
+    <div class="logo-glow">FFKIPAS TERBARU OB53</div>
+  </div>
 
-<h1>
-DOWNLOAD FF KIPAS<br>
-NEW UPDATE 2026 BY DEKU
-</h1>
+  <div class="thumbnail">
+    <img class="thumb-img" src="https://i.postimg.cc/htG3b1jh/IMG-20260426-WA0009.jpg" alt="FF KIPAS" style="object-fit:cover; background:#1f1f2a;">
+  </div>
 
-<button class="gold" onclick="goDownload()">DOWNLOAD (TANPA OBB)</button>
-<button class="blue" onclick="goTutorial()">CONFIG JSON V2</button>
-<button class="blue" onclick="goVerify()">Verifikasi ID</button>
-<button class="blue" onclick="goPanel()">Access Panel</button>
+  <div>
+    <div class="badge">
+      <i class="fas fa-shield-alt"></i> PROXY SERVER / PRIVATE SERVER
+    </div>
+    <div class="main-card">
+      <h1>FFKIPAS NEW OB53</h1>
+      <p class="desc">Free Fire Beta Server VIP dengan koneksi proxy yang stabil, sehingga pengalaman bermain jadi lebih lancar tanpa lag. Nikmati berbagai fitur unggulan seperti unlock bundle eksklusif dan emote keren untuk memperkaya gaya bermainmu. Cocok untuk mabar bareng teman, dengan performa yang lebih ringan dan responsif. Tingkatkan peluangmu untuk meraih Booyah setiap hari dengan pengalaman bermain yang lebih maksimal dan seru.</p>
+      <div class="info-grid">
+        <div class="info-item"><i class="fas fa-star"></i><div><div class="info-label">Rating</div><div class="info-value">4.5/5</div></div></div>
+        <div class="info-item"><i class="fas fa-code-branch"></i><div><div class="info-label">Versi</div><div class="info-value">v2.124.1</div></div></div>
+        <div class="info-item"><i class="fas fa-download"></i><div><div class="info-label">Download</div><div class="info-value">60.000+</div></div></div>
+      </div>
+      <div class="btn-group">
+        <button class="btn" id="downloadMainBtn"><i class="fas fa-download"></i> Unduh Sekarang</button>
+        <button class="btn" id="googlePlayBtn"><i class="fab fa-google-play"></i> Get it on Google Play / APK</button>
+        <button class="btn btn-outline" id="resellerBtn"><i class="fas fa-crown"></i> Reseller Resmi VIP</button>
+      </div>
+    </div>
+  </div>
+</div>
 
-<!-- IKLAN TENGAH -->
-<div class="ad-middle">
+<!-- MODAL DOWNLOAD (PILIH VERSI DENGAN LINK BERBEDA) -->
+<div id="downloadModal" class="modal-overlay">
+  <div class="modal-container">
+    <div class="modal-header">
+      <h3><i class="fas fa-server"></i> Pilih Versi Download</h3>
+      <button class="close-modal" onclick="closeModal('downloadModal')"><i class="fas fa-times"></i></button>
+    </div>
+    <div class="download-options" id="versionList">
+      <div class="opt-item" data-version="json-work" data-link="https://sfl.gl/1xYpG6MB"><div class="opt-text">JSON WORK</div><i class="fas fa-file-code"></i></div>
+      <div class="opt-item" data-version="64bit" data-link="https://sfl.gl/QGhkana"><div class="opt-text">64BIT</div><i class="fas fa-microchip"></i></div>
+      <div class="opt-item" data-version="32bit" data-link="https://sfl.gl/qTAQz"><div class="opt-text">32BIT</div><i class="fas fa-microchip"></i></div>
+      <div class="opt-item" data-version="ffbeta" data-link="https://sfl.gl/ff-beta-latest"><div class="opt-text">FF Beta</div><i class="fas fa-gamepad"></i></div>
+      <div class="opt-item disabled" data-version="ios"><div class="opt-text">iOS (Coming Soon)</div><span class="opt-badge">disabled</span></div>
+    </div>
+  </div>
+</div>
+
+<!-- MODAL FLOW DOWNLOAD -->
+<div id="flowModal" class="modal-overlay">
+  <div class="modal-container" style="max-width:420px">
+    <div class="modal-header">
+      <h3 id="flowTitle">Menyiapkan Download</h3>
+      <button class="close-modal" onclick="closeModal('flowModal'); resetFlow()"><i class="fas fa-times"></i></button>
+    </div>
+    <div id="flowContent" style="text-align:center; padding: 10px 0 20px;"></div>
+  </div>
+</div>
+
+<!-- MODAL RESELLER LIST -->
+<div id="resellerModal" class="modal-overlay">
+  <div class="modal-container" style="max-width:560px">
+    <div class="modal-header">
+      <h3><i class="fas fa-store"></i> Reseller Resmi VIP</h3>
+      <button class="close-modal" onclick="closeModal('resellerModal')"><i class="fas fa-times"></i></button>
+    </div>
+    <div id="resellerListContainer" class="reseller-card-grid"></div>
+  </div>
+</div>
+
+<!-- MODAL KONTAK RESELLER -->
+<div id="contactModal" class="modal-overlay">
+  <div class="modal-container" style="max-width:450px">
+    <div class="modal-header">
+      <h3><i class="fas fa-headset"></i> Hubungi Reseller</h3>
+      <button class="close-modal" onclick="closeModal('contactModal')"><i class="fas fa-times"></i></button>
+    </div>
+    <div id="contactLinks"></div>
+  </div>
+</div>
 
 <script>
-atOptions = {
-'key' : 'a4ab1a963555175bf5457cccde293dcf',
-'format' : 'iframe',
-'height' : 250,
-'width' : 300,
-'params' : {}
-};
+  // Data Reseller (5 reseller)
+  const resellers = [
+    { name: "MAS DINZ", status: "open", contact: { tiktok: "https://tiktok.com/@dinzxvx", telegram: "https://t.me/dinzzxkipas", discord: "https://discord.com/users/1370956412741746811" } },
+    { name: "DIKAW", status: "open", contact: { tiktok: "https://www.tiktok.com/@dikaw1111?_t=ZS-8xKMklgf9Wb&_r=1", telegram: "#", discord: "https://discord.com/users/1378567052234592276" } },
+    { name: "MUHLIS", status: "open", contact: { tiktok: "https://www.tiktok.com/@ini.muhlis2?_r=1&_t=ZS-95q970F0YtA", telegram: "https://t.me/superseyya", discord: "https://discord.com/users/1369940621103599630" } },
+    { name: "MAS ADEN", status: "close", contact: { tiktok: "https://www.tiktok.com/@adenf9?_r=1&_t=ZS-95q9ZwJFzE5", telegram: "https://t.me/adenffkipas", discord: "https://discord.com/users/1354506952574763088" } },
+    { name: "EJOO", status: "open", contact: { tiktok: "#", telegram: "#", discord: "https://discord.com/users/1369940621103599630" } }
+  ];
+
+  // State flow download
+  let currentFlowStep = 0;
+  let countdownInterval = null;
+  let selectedDownloadLink = null;
+  let selectedVersionName = null;
+  
+  // Click counter untuk syarat iklan (minimal 2x klik sebelum pop up download muncul)
+  let adClickCount = 0;
+  
+  // Helper close modal
+  function closeModal(modalId) {
+    const modal = document.getElementById(modalId);
+    if(modal) modal.classList.remove('active');
+    if(modalId === 'flowModal') resetFlow();
+  }
+  function openModal(modalId) {
+    document.getElementById(modalId).classList.add('active');
+  }
+
+  function resetFlow() {
+    if(countdownInterval) clearInterval(countdownInterval);
+    currentFlowStep = 0;
+    selectedDownloadLink = null;
+    selectedVersionName = null;
+  }
+  
+  // Fungsi untuk menampilkan iklan Adsterra (popunder/redirect)
+  function showAdsterraAd() {
+    // Memicu iklan Adsterra dengan membuka URL iklan (tanpa banner)
+    const adUrl = "https://molecularshindy.com/vexktzk1d?key=656462aeffe1dabfd8b2e89b04e5ba3c";
+    window.open(adUrl, '_blank');
+  }
+
+  // Fungsi untuk memeriksa dan menambah jumlah klik iklan (untuk tombol utama)
+  function handleAdRequiredAction(callback) {
+    adClickCount++;
+    showAdsterraAd();
+    if(adClickCount >= 2) {
+      adClickCount = 0;
+      if(callback) callback();
+    } else {
+      alert(` ${2 - adClickCount}x lagi untuk melanjutkan download!`);
+    }
+  }
+
+  // Fungsi untuk menampilkan pilihan download (pop up download) setelah syarat iklan terpenuhi
+  function showDownloadSelection() {
+    openModal('downloadModal');
+  }
+
+  // TOMBOL UTAMA: Unduh Sekarang & Get it on Google Play harus klik iklan 2x baru muncul pop up download
+  document.getElementById('downloadMainBtn')?.addEventListener('click', () => {
+    handleAdRequiredAction(() => {
+      showDownloadSelection();
+    });
+  });
+  
+  document.getElementById('googlePlayBtn')?.addEventListener('click', () => {
+    handleAdRequiredAction(() => {
+      showDownloadSelection();
+    });
+  });
+  
+  // Tombol Reseller (tidak perlu iklan)
+  document.getElementById('resellerBtn')?.addEventListener('click', () => {
+    renderResellers();
+    openModal('resellerModal');
+  });
+
+  // Ketika user memilih opsi download, harus klik iklan 1x, lalu muncul pop up mempersiapkan server 10 detik
+  function bindVersionOptionsWithLinks() {
+    const options = document.querySelectorAll('#versionList .opt-item:not(.disabled)');
+    options.forEach(opt => {
+      opt.style.cursor = 'pointer';
+      opt.addEventListener('click', (e) => {
+        if(opt.classList.contains('disabled')) return;
+        const link = opt.getAttribute('data-link');
+        const versionText = opt.querySelector('.opt-text')?.innerText || "Version";
+        if(link) {
+          // Sebelum lanjut ke flow, user harus klik iklan 1x
+          showAdsterraAd();
+          // Tampilkan konfirmasi ulang setelah iklan diklik
+          setTimeout(() => {
+            if(confirm("Klik OK untuk melanjutkan proses download")) {
+              closeModal('downloadModal');
+              startDownloadFlow(link, versionText);
+            }
+          }, 300);
+        } else {
+          alert("Link untuk versi ini belum tersedia");
+        }
+      });
+    });
+  }
+
+  // Flow download dengan redirect ke link spesifik setelah semua step
+  function startDownloadFlow(link, versionName) {
+    if(!link) {
+      console.warn("Link tidak valid");
+      return;
+    }
+    selectedDownloadLink = link;
+    selectedVersionName = versionName;
+    currentFlowStep = 1;
+    showFlowStep1();
+    openModal('flowModal');
+  }
+
+  function showFlowStep1() {
+    let counter = 10;
+    const flowTitleSpan = document.getElementById('flowTitle');
+    const flowContentDiv = document.getElementById('flowContent');
+    flowTitleSpan.innerText = "Preparing Download";
+    flowContentDiv.innerHTML = `<div class="countdown-btn"><span class="spinner"></span> Menyiapkan server... <span id="countdownSec">${counter}</span>s</div>`;
+    if(countdownInterval) clearInterval(countdownInterval);
+    countdownInterval = setInterval(() => {
+      counter--;
+      const spanSec = document.getElementById('countdownSec');
+      if(spanSec) spanSec.innerText = counter;
+      if(counter <= 0) {
+        clearInterval(countdownInterval);
+        currentFlowStep = 2;
+        showFlowStep2();
+      }
+    }, 1000);
+  }
+
+  function showFlowStep2() {
+    const flowTitleSpan = document.getElementById('flowTitle');
+    const flowContentDiv = document.getElementById('flowContent');
+    flowTitleSpan.innerText = "Konfirmasi Download";
+    flowContentDiv.innerHTML = `<button id="continueBtn" class="btn" style="width:100%"><i class="fas fa-arrow-right"></i> Continue</button>`;
+    const continueBtn = document.getElementById('continueBtn');
+    if(continueBtn) continueBtn.onclick = () => {
+      // Sebelum melanjutkan ke step verifikasi, tampilkan iklan 1x
+      showAdsterraAd();
+      setTimeout(() => {
+        if(confirm("Klik OK untuk lanjut verifikasi")) {
+          currentFlowStep = 3;
+          showFlowStep3();
+        }
+      }, 300);
+    };
+  }
+
+  function showFlowStep3() {
+    const flowTitleSpan = document.getElementById('flowTitle');
+    const flowContentDiv = document.getElementById('flowContent');
+    flowTitleSpan.innerText = "Verifikasi";
+    flowContentDiv.innerHTML = `<div style="padding:1rem; text-align:center"><span class="spinner"></span> Verifying (5detik)</div>`;
+    let timer = 5;
+    const interval = setInterval(() => {
+      timer--;
+      if(timer <= 0) {
+        clearInterval(interval);
+        currentFlowStep = 4;
+        showFlowStep4();
+      }
+    }, 1000);
+  }
+
+  function showFlowStep4() {
+    const flowTitleSpan = document.getElementById('flowTitle');
+    const flowContentDiv = document.getElementById('flowContent');
+    flowTitleSpan.innerText = "Siap Download";
+    flowContentDiv.innerHTML = `<button id="downloadNowBtn" class="btn" style="width:100%"><i class="fas fa-download"></i> Download Now</button>`;
+    const downBtn = document.getElementById('downloadNowBtn');
+    if(downBtn) downBtn.onclick = () => {
+      // Sebelum download final, tampilkan iklan 1x
+      showAdsterraAd();
+      setTimeout(() => {
+        if(confirm("Klik OK untuk final download")) {
+          if(selectedDownloadLink) {
+            // Setelah iklan diklik, redirect ke link tujuan
+            window.location.href = selectedDownloadLink;
+          } else {
+            alert("Link tidak tersedia");
+          }
+          closeModal('flowModal');
+          resetFlow();
+        }
+      }, 300);
+    };
+  }
+
+  // Render Reseller Cards
+  function renderResellers() {
+    const container = document.getElementById('resellerListContainer');
+    if(!container) return;
+    container.innerHTML = '';
+    resellers.forEach(res => {
+      const isOpen = res.status === 'open';
+      const cardDiv = document.createElement('div');
+      cardDiv.className = `res-card ${!isOpen ? 'closed-card' : ''}`;
+      cardDiv.innerHTML = `
+        <div class="res-info">
+          <h4>${res.name} ${isOpen ? '<i class="fas fa-check-circle verified-icon"></i>' : ''}</h4>
+          <div><span class="status-badge ${isOpen ? 'status-open' : 'status-close'}">${isOpen ? 'OPEN' : 'CLOSE'}</span></div>
+        </div>
+        <div>
+          <button class="buy-btn ${!isOpen ? 'disabled-btn' : ''}" data-reseller='${JSON.stringify(res)}' ${!isOpen ? 'disabled' : ''}>${isOpen ? 'BUY' : 'Unavailable'}</button>
+        </div>
+      `;
+      if(isOpen) {
+        const buyButton = cardDiv.querySelector('.buy-btn');
+        buyButton.addEventListener('click', (e) => {
+          e.stopPropagation();
+          const resData = JSON.parse(buyButton.getAttribute('data-reseller'));
+          openContactPopup(resData);
+        });
+      }
+      container.appendChild(cardDiv);
+    });
+  }
+
+  function openContactPopup(reseller) {
+    const contactDiv = document.getElementById('contactLinks');
+    if(!contactDiv) return;
+    const { tiktok, telegram, discord } = reseller.contact;
+    contactDiv.innerHTML = `
+      <div class="contact-popup-icons">
+        <a href="${tiktok}" target="_blank" class="contact-icon"><i class="fab fa-tiktok"></i><span>TikTok</span></a>
+        <a href="${telegram}" target="_blank" class="contact-icon"><i class="fab fa-telegram-plane"></i><span>Telegram</span></a>
+        <a href="${discord}" target="_blank" class="contact-icon"><i class="fab fa-discord"></i><span>Discord</span></a>
+      </div>
+      <hr><p style="text-align:center">Hubungi via platform di atas</p>
+    `;
+    openModal('contactModal');
+  }
+
+  // Tutup modal jika klik overlay
+  const modals = document.querySelectorAll('.modal-overlay');
+  modals.forEach(modal => {
+    modal.addEventListener('click', (e) => {
+      if(e.target === modal) {
+        modal.classList.remove('active');
+        if(modal.id === 'flowModal') resetFlow();
+      }
+    });
+  });
+
+  // Inisialisasi
+  bindVersionOptionsWithLinks();
+  renderResellers();
+  
+  console.log("Ready - Iklan banner telah dihapus. Sistem iklan popunder/redirect berlapis aktif: minimal 2x klik iklan -> pop up download -> pilih versi -> 1x iklan -> 10s countdown -> continue -> 1x iklan -> verifikasi 5s -> 1x iklan -> download final.");
 </script>
-<script src="https://www.highperformanceformat.com/a4ab1a963555175bf5457cccde293dcf/invoke.js"></script>
-
-</div>
-
-<div class="info-box">
-⚡ Status Server : <span class="online">Online</span><br>
-👥 Support : Channel WhatsApp
-</div>
-
-<button class="gold" onclick="goDiscord()">Join Channel</button>
-
-<div class="footer-text">
-Download FFKIPAS dan rasakan serunya memakai set idaman
-</div>
-
-</div>
-</div>
-
-<!-- IKLAN BAWAH -->
-<div class="ad-bottom">
-
-<script>
-atOptions = {
-'key' : 'da34e459eeaf02c14c7a28e4923ac6b2',
-'format' : 'iframe',
-'height' : 50,
-'width' : 320,
-'params' : {}
-};
-</script>
-<script src="https://authoritieswoundjoint.com/da34e459eeaf02c14c7a28e4923ac6b2/invoke.js"></script>
-
-</div>
-
-<script>
-
-function goDownload(){window.open("https://sfl.gl/oCNNbsm","_blank")}
-function goTutorial(){window.open("https://sfl.gl/CZuEeZt","_blank")}
-function goVerify(){window.open("https://ffkipas.my.id/verifyuid","_blank")}
-function goPanel(){window.open("https://ffkipas.my.id/panel/","_blank")}
-function goDiscord(){window.open("https://whatsapp.com/channel/0029Vb7c8cSKWEKpTJDmr419","_blank")}
-
-</script>
-
 </body>
 </html>
