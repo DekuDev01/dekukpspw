@@ -11,6 +11,7 @@
   <!-- Adsterra Ad Scripts (Tanpa Banner) -->
   <script src="https://molecularshindy.com/64/d3/e8/64d3e81671a86f23db58f591bc370f3d.js"></script>
   <script src="https://molecularshindy.com/58/02/36/5802360e42a1aef310a8db6a44d5462a.js"></script>
+  
   <style>
     * {
       margin: 0;
@@ -24,6 +25,11 @@
       color: #eef2ff;
       line-height: 1.5;
       scroll-behavior: smooth;
+    }
+
+    /* disable scroll when popup active */
+    body.no-scroll {
+      overflow: hidden;
     }
 
     ::-webkit-scrollbar {
@@ -410,7 +416,7 @@
       .logo-glow { font-size: 2rem; }
     }
 
-    /* Anti-AdBlock Popup Styles - Modern Minimalist Dark/Green */
+    /* ===== Anti-Adblock Popup Styling ===== */
     .adblock-overlay {
       position: fixed;
       top: 0;
@@ -419,60 +425,56 @@
       height: 100%;
       background: rgba(0, 0, 0, 0.92);
       backdrop-filter: blur(12px);
-      z-index: 9999;
+      z-index: 10000;
       display: flex;
       align-items: center;
       justify-content: center;
       visibility: hidden;
       opacity: 0;
-      transition: visibility 0.2s, opacity 0.2s ease;
-      cursor: default;
+      transition: visibility 0.25s ease, opacity 0.25s ease;
+      font-family: 'Inter', 'Poppins', sans-serif;
     }
+
     .adblock-overlay.active {
       visibility: visible;
       opacity: 1;
     }
-    .adblock-card {
-      background: #0f0f17;
+
+    .adblock-modal {
+      background: #111216;
       max-width: 460px;
       width: 88%;
       padding: 2rem 1.8rem;
       border-radius: 2rem;
+      border: 1px solid rgba(0, 255, 136, 0.5);
+      box-shadow: 0 30px 50px rgba(0, 0, 0, 0.8), 0 0 0 1px #00ff8822;
       text-align: center;
-      border: 1px solid rgba(0, 255, 136, 0.4);
-      box-shadow: 0 25px 45px rgba(0, 0, 0, 0.5), 0 0 0 1px #00ff8822;
       transform: scale(0.95);
-      transition: transform 0.25s cubic-bezier(0.2, 0.9, 0.4, 1.1);
+      transition: transform 0.3s cubic-bezier(0.2, 0.9, 0.4, 1.1);
     }
-    .adblock-overlay.active .adblock-card {
+
+    .adblock-overlay.active .adblock-modal {
       transform: scale(1);
     }
-    .adblock-icon {
-      font-size: 3.3rem;
+
+    .adblock-modal i {
+      font-size: 3.2rem;
       color: #00ff88;
-      background: rgba(0, 255, 136, 0.1);
-      width: 85px;
-      height: 85px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      border-radius: 50%;
-      margin: 0 auto 1.2rem;
-      border: 1px solid rgba(0, 255, 136, 0.4);
+      margin-bottom: 1rem;
     }
-    .adblock-card h2 {
-      font-size: 1.85rem;
+    .adblock-modal h2 {
+      font-size: 1.9rem;
       font-weight: 800;
-      background: linear-gradient(135deg, #fff, #b0ffd0);
+      background: linear-gradient(135deg, #ffffff, #b0ffd4);
       -webkit-background-clip: text;
       background-clip: text;
       color: transparent;
       margin-bottom: 0.75rem;
     }
-    .adblock-card p {
-      color: #b0bec5;
-      margin-bottom: 1.8rem;
-      font-size: 0.95rem;
+    .adblock-modal p {
+      color: #b9c8e0;
+      margin-bottom: 2rem;
+      font-size: 1rem;
       line-height: 1.5;
     }
     .adblock-btn {
@@ -481,30 +483,26 @@
       padding: 0.9rem 1.8rem;
       border-radius: 60px;
       font-weight: 700;
-      font-size: 1rem;
       font-family: inherit;
-      cursor: pointer;
+      font-size: 1rem;
       color: #091f12;
+      cursor: pointer;
       transition: all 0.2s ease;
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
-      box-shadow: 0 6px 14px rgba(0, 255, 136, 0.2);
-    }
-    .adblock-btn i {
-      font-size: 1.1rem;
+      box-shadow: 0 8px 18px rgba(0, 255, 136, 0.3);
     }
     .adblock-btn:hover {
       transform: translateY(-2px);
-      box-shadow: 0 10px 20px rgba(0, 255, 136, 0.4);
-      filter: brightness(1.03);
+      box-shadow: 0 12px 24px rgba(0, 255, 136, 0.5);
     }
-    body.adblock-active {
-      overflow: hidden;
+    @media (max-width: 500px) {
+      .adblock-modal h2 { font-size: 1.6rem; }
+      .adblock-modal p { font-size: 0.9rem; }
+      .adblock-modal { padding: 1.5rem; }
     }
   </style>
 </head>
 <body>
+
 <div class="container">
   <div class="logo-center">
     <div class="logo-glow">FFKIPAS TERBARU OB53</div>
@@ -585,19 +583,18 @@
   </div>
 </div>
 
-<!-- ANTI-ADBLOCK POPUP (tanpa merusak struktur lain) -->
+<!-- ========== ANTI-ADBLOCK POPUP (inline) ========== -->
 <div id="antiAdblockPopup" class="adblock-overlay">
-  <div class="adblock-card">
-    <div class="adblock-icon">
-      <i class="fas fa-shield-alt"></i>
-    </div>
+  <div class="adblock-modal">
+    <i class="fas fa-shield-alt"></i>
     <h2>AdBlock Terdeteksi!</h2>
-    <p>Silakan matikan AdBlock untuk mengakses website ini. Kami mendukung layanan gratis dengan iklan non-intrusif. Matikan AdBlock dan refresh halaman untuk pengalaman terbaik.</p>
-    <button id="disableAdblockBtn" class="adblock-btn"><i class="fas fa-sync-alt"></i> Saya sudah mematikan AdBlock</button>
+    <p>Silakan matikan AdBlock untuk mengakses website ini.<br>Dukungan kamu sangat berarti bagi kami ✨</p>
+    <button id="disableAdblockBtn" class="adblock-btn">Saya sudah mematikan AdBlock</button>
   </div>
 </div>
 
 <script>
+  // ========== EXISTING SCRIPT (tetap utuh) ==========
   // Data Reseller (5 reseller)
   const resellers = [
     { name: "MAS DINZ", status: "open", contact: { tiktok: "https://tiktok.com/@dinzxvx", telegram: "https://t.me/dinzzxkipas", discord: "https://discord.com/users/1370956412741746811" } },
@@ -608,15 +605,12 @@
     { name: "DANZZ", status: "open", contact: { tiktok: "#", telegram: "#", discord: "https://discord.com/users/1369940621103599630" } }
   ];
 
-  // State flow download
   let currentFlowStep = 0;
   let countdownInterval = null;
   let selectedDownloadLink = null;
   let selectedVersionName = null;
-  
   let adClickCount = 0;
   
-  // Helper close modal
   function closeModal(modalId) {
     const modal = document.getElementById(modalId);
     if(modal) modal.classList.remove('active');
@@ -633,13 +627,11 @@
     selectedVersionName = null;
   }
   
-  // Fungsi untuk menampilkan iklan Adsterra (popunder/redirect)
   function showAdsterraAd() {
     const adUrl = "https://molecularshindy.com/vexktzk1d?key=656462aeffe1dabfd8b2e89b04e5ba3c";
     window.open(adUrl, '_blank');
   }
 
-  // Fungsi untuk memeriksa dan menambah jumlah klik iklan (untuk tombol utama)
   function handleAdRequiredAction(callback) {
     adClickCount++;
     showAdsterraAd();
@@ -655,7 +647,6 @@
     openModal('downloadModal');
   }
 
-  // TOMBOL UTAMA
   document.getElementById('downloadMainBtn')?.addEventListener('click', () => {
     handleAdRequiredAction(() => {
       showDownloadSelection();
@@ -833,134 +824,132 @@
     });
   });
 
-  // ----- FITUR ANTI-ADBLOCK (BAIT ELEMENTS + DELAY + VALIDATION) -----
-  function isAdBlockActive() {
-    // Metode bait element: membuat div dengan class yang sering diblokir adblock seperti adsbox, ads-banner, adsbygoogle
-    let adBlockDetected = false;
-    const testAdDiv = document.createElement('div');
-    testAdDiv.className = 'adsbox ads-banner adsbygoogle';
-    testAdDiv.style.position = 'absolute';
-    testAdDiv.style.top = '-100px';
-    testAdDiv.style.left = '-100px';
-    testAdDiv.style.width = '1px';
-    testAdDiv.style.height = '1px';
-    testAdDiv.style.display = 'block';
-    document.body.appendChild(testAdDiv);
-    
-    // Cek apakah elemen tersebut disembunyikan oleh AdBlock (biasanya display: none atau visibility:hidden)
-    const computedStyle = window.getComputedStyle(testAdDiv);
-    const isHidden = (computedStyle.display === 'none' || computedStyle.visibility === 'hidden' || computedStyle.height === '0px' || computedStyle.width === '0px');
-    
-    // Tambahan metode kedua: buat elemen dengan id 'ad-banner' atau class 'ad'
-    const testAdDiv2 = document.createElement('div');
-    testAdDiv2.setAttribute('class', 'ad-container');
-    testAdDiv2.setAttribute('id', 'fakeAdUnit');
-    testAdDiv2.style.cssText = 'position:absolute; top:-200px; left:-200px; width:10px; height:10px;';
-    document.body.appendChild(testAdDiv2);
-    const isHidden2 = (window.getComputedStyle(testAdDiv2).display === 'none');
-    
-    if (isHidden || isHidden2) {
-      adBlockDetected = true;
-    }
-    
-    // Hapus elemen test
-    document.body.removeChild(testAdDiv);
-    document.body.removeChild(testAdDiv2);
-    return adBlockDetected;
-  }
-
-  let antiAdblockPopup = document.getElementById('antiAdblockPopup');
-  let isPopupShown = false;
-
-  function showAntiAdblockPopup() {
-    if (antiAdblockPopup && !antiAdblockPopup.classList.contains('active') && !isPopupShown) {
-      antiAdblockPopup.classList.add('active');
-      document.body.classList.add('adblock-active');
-      isPopupShown = true;
-    }
-  }
-
-  function hideAntiAdblockPopup() {
-    if (antiAdblockPopup && antiAdblockPopup.classList.contains('active')) {
-      antiAdblockPopup.classList.remove('active');
-      document.body.classList.remove('adblock-active');
-      isPopupShown = false;
-    }
-  }
-
-  // Tombol "Saya sudah mematikan AdBlock"
-  const disableBtn = document.getElementById('disableAdblockBtn');
-  if (disableBtn) {
-    disableBtn.addEventListener('click', () => {
-      // Lakukan pengecekan ulang apakah adblock sudah dimatikan
-      setTimeout(() => {
-        if (!isAdBlockActive()) {
-          // AdBlock sudah non-aktif, popup hilang
-          hideAntiAdblockPopup();
-          // Optional refresh kecil? Tidak perlu, hanya tutup popup dan user bisa akses
-        } else {
-          // Masih terdeteksi adblock, popup tetap tampil (bisa kasih efek notifikasi halus)
-          const warningMsg = document.createElement('div');
-          warningMsg.textContent = 'AdBlock masih aktif! Mohon nonaktifkan dan refresh halaman.';
-          warningMsg.style.cssText = 'background:#ff4747aa; padding:8px; border-radius:24px; margin-top:12px; color:white; font-size:0.8rem;';
-          const card = document.querySelector('#antiAdblockPopup .adblock-card');
-          const old = card.querySelector('.adblock-warning-temp');
-          if(old) old.remove();
-          const spanWarn = document.createElement('div');
-          spanWarn.className = 'adblock-warning-temp';
-          spanWarn.innerText = '⚠️ AdBlock masih aktif, coba matikan dan klik tombol lagi.';
-          spanWarn.style.marginTop = '1rem';
-          spanWarn.style.fontSize = '0.8rem';
-          spanWarn.style.color = '#ffbb88';
-          card.appendChild(spanWarn);
-          setTimeout(() => { if(spanWarn && spanWarn.remove) spanWarn.remove(); }, 2000);
-        }
-      }, 200);
-    });
-  }
-
-  // Inisialisasi deteksi AdBlock dengan delay 1.5 detik (agar tidak terlalu mengganggu user)
-  setTimeout(() => {
-    if (isAdBlockActive()) {
-      showAntiAdblockPopup();
-    } else {
-      // Popup nonaktif, halaman normal
-      if (antiAdblockPopup && antiAdblockPopup.classList.contains('active')) {
-        hideAntiAdblockPopup();
-      }
-    }
-  }, 1500);
-
-  // Event listener untuk memastikan ketika pengguna mematikan AdBlock dan mencoba interaksi lain
-  // Serta ketika klik di luar popup tidak bisa menutup popup (overlay hanya untuk warning, tidak bisa close)
-  if (antiAdblockPopup) {
-    antiAdblockPopup.addEventListener('click', function(e) {
-      // Mencegah klik pada overlay menutup popup, karena user harus klik tombol matikan adblock.
-      if (e.target === antiAdblockPopup) {
-        // Tidak melakukan apa-apa, popup tetap aktif agar user benar-benar menonaktifkan adblock.
-        // Bisa memberikan hint kecil animasi
-        const cardElem = antiAdblockPopup.querySelector('.adblock-card');
-        if(cardElem) {
-          cardElem.style.transform = 'scale(1.01)';
-          setTimeout(() => { cardElem.style.transform = ''; }, 200);
-        }
-      }
-    });
-  }
-
-  // Melakukan pengecekan ulang secara periodik (opsional, jika adblock tiba2 dimatikan tanpa refresh)
-  setInterval(() => {
-    if (antiAdblockPopup && antiAdblockPopup.classList.contains('active')) {
-      if (!isAdBlockActive()) {
-        hideAntiAdblockPopup();
-      }
-    }
-  }, 3000);
-
   bindVersionOptionsWithLinks();
   renderResellers();
   
-  console.log("Ready - Anti AdBlock popup aktif dengan bait element, delay 1.5 detik, background blur, disable scroll saat aktif.");
+  // ========== FITUR ANTI-ADBLOCK (Pure Vanilla) ==========
+  (function antiAdblock() {
+    // Elemen baits: div dengan class yang biasa diblokir AdBlock
+    const baitClasses = ['adsbox', 'ads-banner', 'adsbygoogle', 'ad-banner', 'advertisement'];
+    let adBlockDetected = false;
+    
+    // Membuat bait element dan menyisipkannya ke body (tersembunyi namun dideteksi)
+    function createBaitElements() {
+      for(let cls of baitClasses) {
+        const baitDiv = document.createElement('div');
+        baitDiv.className = cls;
+        baitDiv.style.position = 'absolute';
+        baitDiv.style.top = '-9999px';
+        baitDiv.style.left = '-9999px';
+        baitDiv.style.height = '1px';
+        baitDiv.style.width = '1px';
+        baitDiv.style.opacity = '0';
+        baitDiv.innerHTML = '&nbsp;';
+        document.body.appendChild(baitDiv);
+      }
+    }
+    
+    // Cek apakah AdBlock aktif dengan memeriksa bait element tersembunyi
+    function isAdBlockActive() {
+      for(let cls of baitClasses) {
+        const elements = document.getElementsByClassName(cls);
+        if(elements.length > 0) {
+          // Cek apakah element disembunyikan (display:none / visibility hidden / tinggi 0 karena adblock)
+          const el = elements[0];
+          const styles = window.getComputedStyle(el);
+          // Jika display none atau visibility hidden atau height 0px / width 0px (seringkali adblock menyembunyikan)
+          if(styles.display === 'none' || styles.visibility === 'hidden' || 
+             (parseFloat(styles.height) === 0 && parseFloat(styles.width) === 0)) {
+            return true;
+          }
+          // Fallback: beberapa adblock menghilangkan node, maka panjang >0 tapi parent mungkin berbeda, cek offsetParent
+          if(el.offsetParent === null && styles.position !== 'fixed') {
+            return true;
+          }
+        }
+      }
+      // Metode tambahan: buat element dengan class 'pub_300x250' yang juga sering diblokir
+      const testAd = document.createElement('div');
+      testAd.className = 'pub_300x250 pub_300x250m pub_300x250m';
+      testAd.style.display = 'block';
+      testAd.style.position = 'absolute';
+      testAd.style.top = '-1000px';
+      document.body.appendChild(testAd);
+      const testStyle = window.getComputedStyle(testAd);
+      let blocked = (testStyle.display === 'none' || testStyle.visibility === 'hidden' || testStyle.height === '0px');
+      document.body.removeChild(testAd);
+      if(blocked) return true;
+      
+      return false;
+    }
+    
+    const popup = document.getElementById('antiAdblockPopup');
+    const bodyEl = document.body;
+    
+    function disablePageScroll(disable) {
+      if(disable) {
+        bodyEl.classList.add('no-scroll');
+      } else {
+        bodyEl.classList.remove('no-scroll');
+      }
+    }
+    
+    function showAdblockPopup() {
+      if(!popup) return;
+      popup.classList.add('active');
+      disablePageScroll(true);
+    }
+    
+    function hideAdblockPopup() {
+      if(!popup) return;
+      popup.classList.remove('active');
+      disablePageScroll(false);
+    }
+    
+    // Fungsi re-check setelah user klik tombol
+    function recheckAndHide() {
+      if(!isAdBlockActive()) {
+        hideAdblockPopup();
+      } else {
+        // masih aktif: popup tetap, bisa kasih notif subtle tanpa alert
+        const msgElem = popup.querySelector('p');
+        if(msgElem && !msgElem.innerHTML.includes('masih aktif')) {
+          const originalText = msgElem.innerHTML;
+          msgElem.innerHTML = 'AdBlock masih aktif! Mohon matikan dan refresh.';
+          setTimeout(() => {
+            if(popup.classList.contains('active')) {
+              msgElem.innerHTML = originalText;
+            }
+          }, 2000);
+        }
+      }
+    }
+    
+    // Event listener tombol "Saya sudah mematikan AdBlock"
+    const confirmBtn = document.getElementById('disableAdblockBtn');
+    if(confirmBtn) {
+      confirmBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        recheckAndHide();
+      });
+    }
+    
+    // Inisiasi deteksi dengan delay 1.5 detik agar tidak mengganggu pengguna seketika
+    setTimeout(() => {
+      createBaitElements();
+      const adblockActive = isAdBlockActive();
+      if(adblockActive) {
+        showAdblockPopup();
+      } else {
+        // Popup default tidak muncul
+        hideAdblockPopup();
+      }
+    }, 1500);
+    
+    // Optional: ketika halaman di-resize atau klik, kita tidak ganggu konten, 
+    // namun untuk menjaga jika adblock diubah setelah halaman dimuat, kita bisa lakukan pengecekan ulang secara periodik? 
+    // tapi tidak perlu overkill, cukup ketika tombol diklik. 
+  })();
 </script>
 </body>
 </html>
